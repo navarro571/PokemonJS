@@ -1,11 +1,10 @@
 import requestcharacters from './utils/RequestCharacters.js';
 import { addcard } from './utils/DOMModifier.js';
 
-let requestCharactersOffset = 0;
-const maxCharactersLoad = 40;
+const maxCharactersLoad = 20;
 
 (async function init(){
-    const characters = await requestcharacters(requestCharactersOffset, maxCharactersLoad);
+    const characters = await requestcharacters(maxCharactersLoad);
     characters.forEach((character) => {
         addcard(character);
     });

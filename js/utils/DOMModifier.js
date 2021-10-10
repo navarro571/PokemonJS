@@ -9,7 +9,7 @@ export function addcard(card) {
     container.innerHTML += 
     ` <div class="card">
         <div class="header">
-            <img src="${card.stats.image}" alt="Pokemon image">
+            <img loading="lazy" src="${card.stats.image}" alt="Pokemon image">
         </div>
         <div class="info">
             <div class="pokemon-info">

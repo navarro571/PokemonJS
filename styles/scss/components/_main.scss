@@ -7,6 +7,7 @@
     padding-left: 15px;
     padding-right: 15px;
     transition: background-color 0.2s;
+    margin: 10px;
     &:focus {
         background-color: white;
     }
@@ -49,21 +50,22 @@ main {
                     margin: 0px 10px;
                 }
             }
+            
+            @media (max-width: 720px) { 
+                .others-filter{
+                    display: flex;
+                    flex-direction: column;
+                    input {
+                        @include input(100%, 30px);
+                    }
+                }
+            }
         }
     }
     .container {
         position: relative;
         margin-top: 20px;
-        &::after {
-            position: absolute;
-            content: "";
-            left: 0;
-            width: 100%;
-            bottom: 0;
-            height: 20%;
-            background: linear-gradient(to top, white, transparent);
-            z-index: 2;
-        }
+        
         > .elements {
             display: flex;
             flex-flow: row wrap;
@@ -77,6 +79,23 @@ main {
             }
             &::-webkit-scrollbar-thumb {
                 background-color: rgb(211, 211, 211);
+            }
+        }
+        @media (max-width: 720px) { 
+            .elements{
+                max-height: calc(100vh - 500px);
+            }
+        }
+        @media (min-width: 720px) { 
+            &::after {
+                position: absolute;
+                content: "";
+                left: 0;
+                width: 100%;
+                bottom: 0;
+                height: 20%;
+                background: linear-gradient(to top, white, transparent);
+                z-index: 2;
             }
         }
     }
