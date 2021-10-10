@@ -1,0 +1,95 @@
+@mixin input($val-width, $val-height) {
+    background-color: $maincolor;
+    border: 1px solid;      
+    border-radius: 20px; 
+    width: $val-width;
+    height: $val-height;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: background-color 0.2s;
+    &:focus {
+        background-color: white;
+    }
+    &:hover {
+        background-color: white;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .filter {
+        background-color: $maincolor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            .main-filter {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 14px;
+                input{
+                    @include input(80%, 30px);
+                }
+            }
+            .others-filter {
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                input{
+                    @include input(15%, 30px);
+                    margin: 0px 10px;
+                }
+            }
+        }
+    }
+    .container {
+        position: relative;
+        margin-top: 20px;
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            height: 20%;
+            background: linear-gradient(to top, white, transparent);
+            z-index: 2;
+        }
+        > .elements {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 60px;
+            overflow-y: auto;
+            max-height: calc(100vh - 300px);
+            padding-bottom: 20px;
+            &::-webkit-scrollbar {
+                width: 2px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: rgb(211, 211, 211);
+            }
+        }
+    }
+}
+button {
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+    transition: background-color 0.7s;
+    transition: color 0.3s;
+    &:hover{
+        background-color: rgb(255, 107, 87);
+        color: white;
+    }
+}

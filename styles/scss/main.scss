@@ -1,0 +1,33 @@
+@import "./components/variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+@import "./components/header";
+@import "./components/main";
+@import "./components/footer";
+@import "./components/card";
+
+.container{
+    max-width: 1076px;
+    width: 100vw;
+    margin: auto;
+}
+
+.is-fullwidth{
+    width: 100% !important;
+}

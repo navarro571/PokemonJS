@@ -1,0 +1,29 @@
+header {
+    width: 100%;
+    background-color: $maincolor;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 20px;
+        height: 80px;
+        border-bottom: 1px solid rgb(197, 197, 197);
+        .logo {
+            display: flex;
+            align-items: center;
+            img {
+                height: 60px;
+                width: 75px;
+                border-right: 2px solid rgb(0.25,0.25,0.25);
+                padding-right: 15px;
+            }
+            .text {
+                font-size: $font-size;
+                margin-left: 10px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+}
