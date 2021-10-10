@@ -79,7 +79,7 @@ main .filter form .main-filter input {
   padding-left: 15px;
   padding-right: 15px;
   transition: background-color 0.2s;
-  margin: 10px;
+  margin: 0px 10px;
 }
 main .filter form .main-filter input:focus {
   background-color: white;
@@ -101,7 +101,7 @@ main .filter form .others-filter input {
   padding-left: 15px;
   padding-right: 15px;
   transition: background-color 0.2s;
-  margin: 10px;
+  margin: 0px 10px;
   margin: 0px 10px;
 }
 main .filter form .others-filter input:focus {
@@ -124,7 +124,7 @@ main .filter form .others-filter input:hover {
     padding-left: 15px;
     padding-right: 15px;
     transition: background-color 0.2s;
-    margin: 10px;
+    margin: 0px 10px;
   }
   main .filter form .others-filter input:focus {
     background-color: white;
@@ -189,7 +189,7 @@ footer {
   background-color: #fafafa;
 }
 footer .container {
-  height: 60px;
+  height: 65px;
   display: flex;
   justify-content: left;
   align-items: center;
