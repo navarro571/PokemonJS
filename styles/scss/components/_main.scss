@@ -80,11 +80,6 @@ main {
                 background-color: rgb(211, 211, 211);
             }
         }
-        @media (max-width: 720px) { 
-            .elements{
-                max-height: calc(100vh - 500px);
-            }
-        }
         @media (min-width: 720px) { 
             &::after {
                 position: absolute;
