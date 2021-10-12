@@ -30,3 +30,7 @@ export function addcard(card) {
     </div>
     `
 }
+
+export function clearContainer(){
+    container.innerHTML = '';
+}
